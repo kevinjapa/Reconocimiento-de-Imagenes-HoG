@@ -25,7 +25,7 @@ map<int, string> loadLabelMap(const string& filename) {
 
 int main() {
     // Ruta de la imagen de prueba
-    string imagePath = "tiktok.png";
+    string imagePath = "Predicciones/Tiktok/1366_2000.jpg";
 
     // Cargar la imagen
     Mat image = imread(imagePath, IMREAD_GRAYSCALE);
@@ -66,7 +66,7 @@ int main() {
     } else {
         cout << "Etiqueta desconocida: " << predictedLabel << endl;
     }
-    putText(image, labelMap[predictedLabel], Point(50,250), FONT_HERSHEY_SIMPLEX, 1, Scalar (255, 255, 255), 2);
+    putText(image, "La Predicciones: "+labelMap[predictedLabel], Point(50,250), FONT_HERSHEY_SIMPLEX, 1, Scalar (255, 255, 255), 3);
     imshow("Prediccion es: " +labelMap[predictedLabel], image);
     waitKey(0);
     destroyAllWindows();
