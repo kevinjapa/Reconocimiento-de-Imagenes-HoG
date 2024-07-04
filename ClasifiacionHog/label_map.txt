@@ -1,0 +1,4 @@
+0 tiktok
+1 netflix
+2 zoom
+3 google
